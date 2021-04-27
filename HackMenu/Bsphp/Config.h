@@ -30,7 +30,7 @@
 //图标大小
 #define ICONDX 40
 //菜单地址
-#define CDURL @"https://iosgods.cn/cj.json";
+#define CDURL @"https://iosgods.cn/cjj.json";
 @interface NetTool : NSObject
 
 /**

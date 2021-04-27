@@ -38,6 +38,12 @@
         NSString *xiugaigeshidata = [caidan[ii] objectForKey:@"修改格式"];
         NSArray *xiugaigeshi = [xiugaigeshidata componentsSeparatedByString:@","];
         
+        NSString *jingquesousuodata = [caidan[ii] objectForKey:@"精确搜索"];
+        NSArray *jingquesousuo = [jingquesousuodata componentsSeparatedByString:@","];
+        
+        NSString *jingquegeshidata = [caidan[ii] objectForKey:@"精确格式"];
+        NSArray *jingquegeshi = [jingquegeshidata componentsSeparatedByString:@","];
+        
         
         if ([title isEqualToString:array[ii]]){
                if (open) {
@@ -95,219 +101,217 @@
                         //联合第二个搜索
                         else if(sousuo[1]!=nil){
                                 if ([geshi[1] isEqual:@"Double"]) {
-                                double search = [sousuo[0] doubleValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_Double);
+                                double search1 = [sousuo[0] doubleValue];
+                                engine.JRNearBySearch(0x100, &search1, JR_Search_Type_Double);
                             }
                                 else if ([geshi[1] isEqual:@"Float"]) {
-                                float search = [sousuo[0] floatValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_Float);
+                                float search1 = [sousuo[0] floatValue];
+                                engine.JRNearBySearch(0x100, &search1, JR_Search_Type_Float);
                             }
                                 else if ([geshi[1] isEqual:@"I8"]) {
-                                SInt8 search = [sousuo[0] intValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_SByte);
+                                SInt8 search1 = [sousuo[0] intValue];
+                                engine.JRNearBySearch(0x100, &search1, JR_Search_Type_SByte);
                             }
                                 else if ([geshi[1] isEqual:@"I16"]) {
-                                SInt16 search = [sousuo[0] intValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_SShort);
+                                SInt16 search1 = [sousuo[0] intValue];
+                                engine.JRNearBySearch(0x100, &search1, JR_Search_Type_SShort);
                             }
                                 else if ([geshi[1] isEqual:@"I32"]) {
-                                SInt32 search = [sousuo[0] intValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_SInt);
+                                SInt32 search1 = [sousuo[0] intValue];
+                                engine.JRNearBySearch(0x100, &search1, JR_Search_Type_SInt);
                             }
                                 else if ([geshi[1] isEqual:@"I64"]) {
-                                SInt64 search = [sousuo[0] longLongValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_SLong);
+                                SInt64 search1 = [sousuo[0] longLongValue];
+                                engine.JRNearBySearch(0x100, &search1, JR_Search_Type_SLong);
                             }
                                 else if ([geshi[1] isEqual:@"U8"]) {
-                                uint8_t search = [sousuo[0] doubleValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_UByte);
+                                uint8_t search1 = [sousuo[0] doubleValue];
+                                engine.JRNearBySearch(0x100, &search1, JR_Search_Type_UByte);
                             }
                                 else if ([geshi[1] isEqual:@"U16"]) {
-                                uint16_t search = [sousuo[0] unsignedIntValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_UShort);
+                                uint16_t search1 = [sousuo[0] unsignedIntValue];
+                                engine.JRNearBySearch(0x100, &search1, JR_Search_Type_UShort);
                             }
                                 else if ([geshi[1] isEqual:@"U32"]) {
-                                uint32_t search = [sousuo[0] unsignedIntValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_UInt);
+                                uint32_t search1 = [sousuo[0] unsignedIntValue];
+                                engine.JRNearBySearch(0x100, &search1, JR_Search_Type_UInt);
                             }
                                 else if ([geshi[1] isEqual:@"U64"]) {
-                                uint64_t search = [sousuo[0] unsignedLongLongValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_ULong);
+                                uint64_t search1 = [sousuo[0] unsignedLongLongValue];
+                                engine.JRNearBySearch(0x100, &search1, JR_Search_Type_ULong);
                             }
                             }
                         //联合第三个搜索
                         else if(sousuo[2]!=nil){
                                 if ([geshi[2] isEqual:@"Double"]) {
-                                double search = [sousuo[0] doubleValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_Double);
+                                double search2 = [sousuo[0] doubleValue];
+                                engine.JRNearBySearch(0x100, &search2, JR_Search_Type_Double);
                             }
                                 else if ([geshi[2] isEqual:@"Float"]) {
-                                float search = [sousuo[0] floatValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_Float);
+                                float search2 = [sousuo[0] floatValue];
+                                engine.JRNearBySearch(0x100, &search2, JR_Search_Type_Float);
                             }
                                 else if ([geshi[2] isEqual:@"I8"]) {
-                                SInt8 search = [sousuo[0] intValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_SByte);
+                                SInt8 search2 = [sousuo[0] intValue];
+                                engine.JRNearBySearch(0x100, &search2, JR_Search_Type_SByte);
                             }
                                 else if ([geshi[2] isEqual:@"I16"]) {
-                                SInt16 search = [sousuo[0] intValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_SShort);
+                                SInt16 search2 = [sousuo[0] intValue];
+                                engine.JRNearBySearch(0x100, &search2, JR_Search_Type_SShort);
                             }
                                 else if ([geshi[2] isEqual:@"I32"]) {
-                                SInt32 search = [sousuo[0] intValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_SInt);
+                                SInt32 search2 = [sousuo[0] intValue];
+                                engine.JRNearBySearch(0x100, &search2, JR_Search_Type_SInt);
                             }
                                 else if ([geshi[2] isEqual:@"I64"]) {
-                                SInt64 search = [sousuo[0] longLongValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_SLong);
+                                SInt64 search2 = [sousuo[0] longLongValue];
+                                engine.JRNearBySearch(0x100, &search2, JR_Search_Type_SLong);
                             }
                                 else if ([geshi[2] isEqual:@"U8"]) {
-                                uint8_t search = [sousuo[0] unsignedIntValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_UByte);
+                                uint8_t search2 = [sousuo[0] unsignedIntValue];
+                                engine.JRNearBySearch(0x100, &search2, JR_Search_Type_UByte);
                             }
                                 else if ([geshi[2] isEqual:@"U16"]) {
-                                uint16_t search = [sousuo[0] unsignedIntValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_UShort);
+                                uint16_t search2 = [sousuo[0] unsignedIntValue];
+                                engine.JRNearBySearch(0x100, &search2, JR_Search_Type_UShort);
                             }
                                 else if ([geshi[2] isEqual:@"U32"]) {
-                                uint32_t search = [sousuo[0] unsignedIntValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_UInt);
+                                uint32_t search2 = [sousuo[0] unsignedIntValue];
+                                engine.JRNearBySearch(0x100, &search2, JR_Search_Type_UInt);
                             }
                                 else if ([geshi[2] isEqual:@"U64"]) {
-                                uint64_t search = [sousuo[0] unsignedLongLongValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_ULong);
+                                uint64_t search2 = [sousuo[0] unsignedLongLongValue];
+                                engine.JRNearBySearch(0x100, &search2, JR_Search_Type_ULong);
                             }
                             }
                         //联合第四个搜索
                         else if(sousuo[3]!=nil){
                                 if ([geshi[3] isEqual:@"Double"]) {
-                                double search = [sousuo[0] doubleValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_Double);
+                                double search3 = [sousuo[0] doubleValue];
+                                engine.JRNearBySearch(0x100, &search3, JR_Search_Type_Double);
                             }
                                 else if ([geshi[3] isEqual:@"Float"]) {
-                                float search = [sousuo[0] floatValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_Float);
+                                float search3 = [sousuo[0] floatValue];
+                                engine.JRNearBySearch(0x100, &search3, JR_Search_Type_Float);
                             }
                                 else if ([geshi[3] isEqual:@"I8"]) {
-                                SInt8 search = [sousuo[0] intValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_SByte);
+                                SInt8 search3 = [sousuo[0] intValue];
+                                engine.JRNearBySearch(0x100, &search3, JR_Search_Type_SByte);
                             }
                                 else if ([geshi[3] isEqual:@"I16"]) {
-                                SInt16 search = [sousuo[0] intValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_SShort);
+                                SInt16 search3 = [sousuo[0] intValue];
+                                engine.JRNearBySearch(0x100, &search3, JR_Search_Type_SShort);
                             }
                                 else if ([geshi[3] isEqual:@"I32"]) {
-                                SInt32 search = [sousuo[0] intValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_SInt);
+                                SInt32 search3 = [sousuo[0] intValue];
+                                engine.JRNearBySearch(0x100, &search3, JR_Search_Type_SInt);
                             }
                                 else if ([geshi[3] isEqual:@"I64"]) {
-                                SInt64 search = [sousuo[0] longLongValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_SLong);
+                                SInt64 search3 = [sousuo[0] longLongValue];
+                                engine.JRNearBySearch(0x100, &search3, JR_Search_Type_SLong);
                             }
                                 else if ([geshi[3] isEqual:@"U8"]) {
-                                uint8_t search = [sousuo[0] unsignedIntValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_UByte);
+                                uint8_t search3 = [sousuo[0] unsignedIntValue];
+                                engine.JRNearBySearch(0x100, &search3, JR_Search_Type_UByte);
                             }
                                 else if ([geshi[3] isEqual:@"U16"]) {
-                                uint16_t search = [sousuo[0] unsignedIntValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_UShort);
+                                uint16_t search3 = [sousuo[0] unsignedIntValue];
+                                engine.JRNearBySearch(0x100, &search3, JR_Search_Type_UShort);
                             }
                                 else if ([geshi[3] isEqual:@"U32"]) {
-                                uint32_t search = [sousuo[0] unsignedIntValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_UInt);
+                                uint32_t search3 = [sousuo[0] unsignedIntValue];
+                                engine.JRNearBySearch(0x100, &search3, JR_Search_Type_UInt);
                             }
                                 else if ([geshi[3] isEqual:@"U64"]) {
-                                uint64_t search = [sousuo[0] unsignedLongLongValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_ULong);
+                                uint64_t search3 = [sousuo[0] unsignedLongLongValue];
+                                engine.JRNearBySearch(0x100, &search3, JR_Search_Type_ULong);
                             }
                             }
                         //联合第五个搜索
                         else if(sousuo[4]!=nil){
                                 if ([geshi[4] isEqual:@"Double"]) {
-                                double search = [sousuo[0] doubleValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_Double);
+                                double search4 = [sousuo[0] doubleValue];
+                                engine.JRNearBySearch(0x100, &search4, JR_Search_Type_Double);
                             }
                                 if ([geshi[4] isEqual:@"Float"]) {
-                                float search = [sousuo[0] floatValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_Float);
+                                float search4 = [sousuo[0] floatValue];
+                                engine.JRNearBySearch(0x100, &search4, JR_Search_Type_Float);
                             }
                                 if ([geshi[4] isEqual:@"I8"]) {
-                                SInt8 search = [sousuo[0] intValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_SByte);
+                                SInt8 search4 = [sousuo[0] intValue];
+                                engine.JRNearBySearch(0x100, &search4, JR_Search_Type_SByte);
                             }
                                 if ([geshi[4] isEqual:@"I16"]) {
-                                SInt16 search = [sousuo[0] intValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_SShort);
+                                SInt16 search4 = [sousuo[0] intValue];
+                                engine.JRNearBySearch(0x100, &search4, JR_Search_Type_SShort);
                             }
                                 if ([geshi[4] isEqual:@"I32"]) {
-                                SInt32 search = [sousuo[0] intValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_SInt);
+                                SInt32 search4 = [sousuo[0] intValue];
+                                engine.JRNearBySearch(0x100, &search4, JR_Search_Type_SInt);
                             }
                                 if ([geshi[4] isEqual:@"I64"]) {
-                                SInt64 search = [sousuo[0] longLongValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_SLong);
+                                SInt64 search4 = [sousuo[0] longLongValue];
+                                engine.JRNearBySearch(0x100, &search4, JR_Search_Type_SLong);
                             }
                                 if ([geshi[4] isEqual:@"U8"]) {
-                                uint8_t search = [sousuo[0] unsignedIntValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_UByte);
+                                uint8_t search4 = [sousuo[0] unsignedIntValue];
+                                engine.JRNearBySearch(0x100, &search4, JR_Search_Type_UByte);
                             }
                                 if ([geshi[4] isEqual:@"U16"]) {
-                                uint16_t search = [sousuo[0] unsignedIntValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_UShort);
+                                uint16_t search4 = [sousuo[0] unsignedIntValue];
+                                engine.JRNearBySearch(0x100, &search4, JR_Search_Type_UShort);
                             }
                                 if ([geshi[4] isEqual:@"U32"]) {
-                                uint32_t search = [sousuo[0] unsignedIntValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_UInt);
+                                uint32_t search4 = [sousuo[0] unsignedIntValue];
+                                engine.JRNearBySearch(0x100, &search4, JR_Search_Type_UInt);
                             }
                                 if ([geshi[4] isEqual:@"U64"]) {
-                                uint64_t search = [sousuo[0] unsignedLongLongValue];
-                                engine.JRNearBySearch(0x100, &search, JR_Search_Type_ULong);
+                                uint64_t search4 = [sousuo[0] unsignedLongLongValue];
+                                engine.JRNearBySearch(0x100, &search4, JR_Search_Type_ULong);
                             }
                             }
-                       if(sousuo.count>1){
-                           //最后一个精确搜索
-                           if(sousuo[sousuo.count]!=nil){
-                               if ([geshi[sousuo.count] isEqual:@"Double"]) {
-                               double search = [sousuo[0] doubleValue];
-                               engine.JRScanMemory(range, &search, JR_Search_Type_Double);
-                           }
-                               if ([geshi[sousuo.count] isEqual:@"Float"]) {
-                               float search = [sousuo[0] floatValue];
-                               engine.JRScanMemory(range, &search, JR_Search_Type_Float);
-                           }
-                               if ([geshi[sousuo.count] isEqual:@"I8"]) {
-                               SInt8 search = [sousuo[0] intValue];
-                               engine.JRScanMemory(range, &search, JR_Search_Type_SByte);
-                           }
-                               if ([geshi[sousuo.count] isEqual:@"I16"]) {
-                               SInt16 search = [sousuo[0] intValue];
-                               engine.JRScanMemory(range, &search, JR_Search_Type_SShort);
-                           }
-                               if ([geshi[sousuo.count] isEqual:@"I32"]) {
-                               SInt32 search = [sousuo[0] intValue];
-                               engine.JRScanMemory(range, &search, JR_Search_Type_SInt);
-                           }
-                               if ([geshi[sousuo.count] isEqual:@"I64"]) {
-                               SInt64 search = [sousuo[0] longLongValue];
-                               engine.JRScanMemory(range, &search, JR_Search_Type_SLong);
-                           }
-                               if ([geshi[sousuo.count] isEqual:@"U8"]) {
-                               uint8_t search = [sousuo[0] unsignedIntValue];
-                               engine.JRScanMemory(range, &search, JR_Search_Type_UByte);
-                           }
-                               if ([geshi[sousuo.count] isEqual:@"U16"]) {
-                               uint16_t search = [sousuo[0] unsignedIntValue];
-                               engine.JRScanMemory(range, &search, JR_Search_Type_UShort);
-                           }
-                               if ([geshi[sousuo.count] isEqual:@"U32"]) {
-                               uint32_t search = [sousuo[0] unsignedIntValue];
-                               engine.JRScanMemory(range, &search, JR_Search_Type_UInt);
-                           }
-                               if ([geshi[sousuo.count] isEqual:@"U64"]) {
-                               uint64_t search = [sousuo[0] unsignedLongLongValue];
-                               engine.JRScanMemory(range, &search, JR_Search_Type_ULong);
-                           }
-                           }
+                        //最后精确搜索
+                        if(jingquesousuodata!=nil){
+                           if ([jingquesousuodata isEqual:@"Double"]) {
+                           double search5 = [sousuo[0] doubleValue];
+                           engine.JRScanMemory(range, &search5, JR_Search_Type_Double);
+                       }
+                           if ([jingquesousuodata isEqual:@"Float"]) {
+                           float search5 = [sousuo[0] floatValue];
+                           engine.JRScanMemory(range, &search5, JR_Search_Type_Float);
+                       }
+                           if ([jingquesousuodata isEqual:@"I8"]) {
+                           SInt8 search5 = [sousuo[0] intValue];
+                           engine.JRScanMemory(range, &search5, JR_Search_Type_SByte);
+                       }
+                           if ([jingquesousuodata isEqual:@"I16"]) {
+                           SInt16 search5 = [sousuo[0] intValue];
+                           engine.JRScanMemory(range, &search5, JR_Search_Type_SShort);
+                       }
+                           if ([jingquesousuodata isEqual:@"I32"]) {
+                           SInt32 search5 = [sousuo[0] intValue];
+                           engine.JRScanMemory(range, &search5, JR_Search_Type_SInt);
+                       }
+                           if ([jingquesousuodata isEqual:@"I64"]) {
+                           SInt64 search5 = [sousuo[0] longLongValue];
+                           engine.JRScanMemory(range, &search5, JR_Search_Type_SLong);
+                       }
+                           if ([jingquesousuodata isEqual:@"U8"]) {
+                           uint8_t search5 = [sousuo[0] unsignedIntValue];
+                           engine.JRScanMemory(range, &search5, JR_Search_Type_UByte);
+                       }
+                           if ([jingquesousuodata isEqual:@"U16"]) {
+                           uint16_t search5 = [sousuo[0] unsignedIntValue];
+                           engine.JRScanMemory(range, &search5, JR_Search_Type_UShort);
+                       }
+                           if ([jingquesousuodata isEqual:@"U32"]) {
+                           uint32_t search5 = [sousuo[0] unsignedIntValue];
+                           engine.JRScanMemory(range, &search5, JR_Search_Type_UInt);
+                       }
+                           if ([jingquesousuodata isEqual:@"U64"]) {
+                           uint64_t search5 = [sousuo[0] unsignedLongLongValue];
+                           engine.JRScanMemory(range, &search5, JR_Search_Type_ULong);
+                       }
                        }
                         //最后修改
                         vector<void*>results = engine.getAllResults();
